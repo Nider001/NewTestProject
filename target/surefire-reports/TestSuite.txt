@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 119.583 sec <<< FAILURE! - in TestSuite
+buyABrush(Tests.TestAbilityToBuyABrush)  Time elapsed: 18.299 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for PageObjects.CatalogPage$1@1e6bd263 (tried for 10 second(s) with 500 MILLISECONDS interval)
+	at Tests.TestAbilityToBuyABrush.buyABrush(TestAbilityToBuyABrush.java:21)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() = 'Показать ещё']"}
+  (Session info: chrome=79.0.3945.88)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'DOMASHNIY', ip: '192.168.1.49', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Andrey\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51843}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dd74f2580f88b586888e6d7a2e017ba4
+*** Element info: {Using=xpath, value=//*[text() = 'Показать ещё']}
+	at Tests.TestAbilityToBuyABrush.buyABrush(TestAbilityToBuyABrush.java:21)
+
