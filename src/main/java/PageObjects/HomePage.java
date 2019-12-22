@@ -26,12 +26,12 @@ public class HomePage
 
 
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
-                                                  public Boolean apply(WebDriver d) {
-                                                      return (d.findElement(By.className("_1FEpprw_Km")).isDisplayed()
-                                                              && d.findElement(By.className("_1hOJdjk4Dx")).isDisplayed()
-                                                              && d.findElement(By.className("_1Y0RowdhI9")).isDisplayed());
-                                                  }
-                                              });
+            public Boolean apply(WebDriver d) {
+                return (d.findElement(By.className("_1FEpprw_Km")).isDisplayed()
+                        && d.findElement(By.className("_1hOJdjk4Dx")).isDisplayed()
+                        && d.findElement(By.className("_1Y0RowdhI9")).isDisplayed());
+            }
+        });
 
         loginButton = driver.findElement(By.className("pFhTbV17qj"));
         cityButton = driver.findElement(By.className("_1hOJdjk4Dx"));
@@ -94,10 +94,9 @@ public class HomePage
 
         final String[] temp = cityName.split("");
 
-        driver.manage().timeouts().implicitlyWait(200, TimeUnit.MILLISECONDS);
         for (String s: temp) {
             textField.sendKeys(s);
-            driver.manage().timeouts().implicitlyWait(200, TimeUnit.MILLISECONDS);
+            driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
         }
 
         final WebElement suggestion = driver.findElement(By.id("react-autowhatever-region--item-0"));
@@ -124,7 +123,7 @@ public class HomePage
 
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.findElement(By.xpath("//span[contains(@data-auto,'region-form-opener')]//span[2]")).getText() == cityName;
+                return d.findElement(By.xpath("//div[text()=\"" + cityName + "\"]")).isDisplayed();
             }
         });
     }
@@ -132,5 +131,11 @@ public class HomePage
     public void goToBrushes(WebDriver driver)
     {
         searchField.sendKeys("электрические зубные щетки" + Keys.ENTER);
+
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return d.findElement(By.cssSelector("[data-auto='filter-range-glprice'] input")).isDisplayed();
+            }
+        });
     }
 }
