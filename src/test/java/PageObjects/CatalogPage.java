@@ -1,6 +1,6 @@
 package PageObjects;
 
-import Settings.WebDriverSettings;
+import Actions.ActionHandler;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
-public class CatalogPage extends WebDriverSettings
+public class CatalogPage extends ActionHandler
 {
     WebElement lowestPrise;
     WebElement highestPrise;
@@ -39,7 +39,7 @@ public class CatalogPage extends WebDriverSettings
     {
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.findElement(By.xpath("//*[text() = 'Показать ещё']")).isDisplayed();
+                return d.findElement(By.xpath("//*[@class = '_3l-uEDOaBN tdrs43E7Xn _3HJsMt3YC_ W-B6JRTjJH']")).isDisplayed();
             }
         });
 

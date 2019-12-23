@@ -3,12 +3,10 @@ package Tests;
 import PageObjects.CartPage;
 import PageObjects.CatalogPage;
 import PageObjects.HomePage;
-import Settings.WebDriverSettings;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import Actions.ActionHandler;
 import org.testng.annotations.Test;
 
-public class TestAbilityToBuyABrush extends WebDriverSettings {
+public class TestAbilityToBuyABrush extends ActionHandler {
 
     @Test
     public void buyABrush()

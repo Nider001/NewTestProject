@@ -1,6 +1,6 @@
 package PageObjects;
 
-import Settings.WebDriverSettings;
+import Actions.ActionHandler;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
 
-public class HomePage extends WebDriverSettings
+public class HomePage extends ActionHandler
 {
     //final Wait<WebDriver> Waiter;
     WebElement loginButton;

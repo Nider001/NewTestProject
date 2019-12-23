@@ -1,6 +1,6 @@
 package PageObjects;
 
-import Settings.WebDriverSettings;
+import Actions.ActionHandler;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class CartPage extends WebDriverSettings
+public class CartPage extends ActionHandler
 {
     //WebElement deliveryInfo;
 
